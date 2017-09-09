@@ -1,0 +1,27 @@
+version: '2'
+services:
+  db:
+    build: ./docker/mysql
+    environment:
+      # MYSQL_ROOT_PASSWORD: root
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+      TZ: 'Asia/Tokyo'
+    ports: 
+      - "3306:3306"
+  web:
+    build: web
+    command: npm run dev
+    volumes:
+      - ./web/:/src
+      - /src/node_modules
+    ports:
+      - "8080:8080"
+  api:
+    build: api
+    command: bundle exec rails s -p 3000 -b '0.0.0.0'
+    volumes:
+      - ./api/:/src
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
