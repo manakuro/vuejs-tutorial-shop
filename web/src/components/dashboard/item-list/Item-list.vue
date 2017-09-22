@@ -5,6 +5,11 @@
   import { mapActions, mapGetters } from 'vuex'
   import Item from './item/Item.vue'
 
+  // don't know why createNamespacedHelpers is undefined even if using version 2.4.0
+  // https://github.com/vuejs/vuex/releases
+  // const { mapActions, mapGetters } = createNamespacedHelpers('dashboard')
+  const namespace = 'dashboard'
+
   export default {
     name: 'item-list',
     components: {
@@ -25,7 +30,7 @@
       this.fetch()
     },
     methods: {
-      ...mapActions([
+      ...mapActions(namespace, [
         'fetchItems'  
       ]),
 
@@ -34,7 +39,7 @@
       },
     },
     computed: {
-      ...mapGetters([
+      ...mapGetters(namespace, [
         'getItems'
       ]),
     }

@@ -8,12 +8,20 @@ import plugins from './plugins'
 
 Vue.use(Vuex)
 
+// modules
+import dashboard from './modules/dashboard/'
+
 const store = new Vuex.Store({
   state,
   getters,
   actions,
   mutations,
-  plugins
+  plugins,
+
+  // modules
+  modules: {
+    dashboard: dashboard,
+  },
 })
 
 export default store

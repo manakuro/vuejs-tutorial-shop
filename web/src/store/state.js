@@ -18,10 +18,7 @@ function buildSyncedData() {
 }
 
 function buildState() {
-  let state = {
-    items: []
-  }
-
+  let state = {}
   return {...state, ...buildSyncedData()}
 }
 
