@@ -1,0 +1,13 @@
+.ui.card {
+  > .content {
+    text-align: left;
+
+    > .meta {
+      margin-bottom: 10px;
+    }
+
+    > .header {
+      font-weight: 400;
+    }
+  }
+}

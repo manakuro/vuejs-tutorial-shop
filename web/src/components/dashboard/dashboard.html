@@ -1,13 +1,8 @@
 <div id="dashboard">
-  <div id="sidebar" class="ui left demo vertical inverted labeled icon sidebar menu push overlay visible">
-   <router-link to="login" class="item">
-    <i class="home icon"></i>Home
-   </router-link>
-   <router-link to="login" class="item">
-    <i class="block layout icon"></i>Topics   
-   </router-link>
-   <router-link to="login" class="item">
-    <i class="sign in icon"></i>Sign In
-   </router-link>
+  <sidebar></sidebar>
+
+  <div class="container">
+    <item-list :user="user"></item-list>
   </div>
+
 </div>

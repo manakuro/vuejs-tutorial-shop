@@ -16,3 +16,7 @@ export const CLEAR_ALL_DATA = (state) => {
     name: ''
   }
 }
+
+export const UPDATE_ITEMS = (state, items) => {
+  state.items = items
+}

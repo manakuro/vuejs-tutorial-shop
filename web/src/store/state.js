@@ -17,7 +17,14 @@ function buildSyncedData() {
   return syncedData
 }
 
+function buildState() {
+  let state = {
+    items: []
+  }
+
+  return {...state, ...buildSyncedData()}
+}
 
 /* export state */
 export const STORAGE_KEY = 'my-storage-key'
-export const state = buildSyncedData()
+export const state = buildState()
