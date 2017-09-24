@@ -4,7 +4,6 @@
 <script>
   import { createNamespacedHelpers } from 'vuex'
   import Item from './item/Item.vue'
-  import ItemModal from './item-modal/Item-modal.vue'
 
   const { mapActions, mapGetters } = createNamespacedHelpers('dashboard')
 
@@ -12,7 +11,6 @@
     name: 'item-list',
     components: {
       'item': Item,
-      'item-modal': ItemModal,
     },
     props: {
       user: {
