@@ -1,13 +1,17 @@
 <div class="column">
   <div class="ui card">
-    <a class="image" href="#link">
+    <a class="image" href="#">
       <img :src="getImgPath(item.img)">
     </a>
     <div class="content">
       <div class="meta">
         <a class="time">{{ item.brand }}</a>
       </div>
-      <a class="header" href="#link">{{ item.price }}</a>
+      <a class="header" href="#">{{ item.price }}</a>
+      <a href="#" @click.stop.prevent="openModal(item.id)">Quick View</a>
     </div>
   </div>
+
+  <item-modal :item="item" :ref="item.id"></item-modal>
 </div>
+

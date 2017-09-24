@@ -2,18 +2,17 @@
 <style lang="scss" scoped rel="stylesheet/scss" src="./item-list.scss"></style>
 
 <script>
-  import { mapActions, mapGetters } from 'vuex'
+  import { createNamespacedHelpers } from 'vuex'
   import Item from './item/Item.vue'
+  import ItemModal from './item-modal/Item-modal.vue'
 
-  // don't know why createNamespacedHelpers is undefined even if using version 2.4.0
-  // https://github.com/vuejs/vuex/releases
-  // const { mapActions, mapGetters } = createNamespacedHelpers('dashboard')
-  const namespace = 'dashboard'
+  const { mapActions, mapGetters } = createNamespacedHelpers('dashboard')
 
   export default {
     name: 'item-list',
     components: {
       'item': Item,
+      'item-modal': ItemModal,
     },
     props: {
       user: {
@@ -30,7 +29,7 @@
       this.fetch()
     },
     methods: {
-      ...mapActions(namespace, [
+      ...mapActions([
         'fetchItems'  
       ]),
 
@@ -39,7 +38,7 @@
       },
     },
     computed: {
-      ...mapGetters(namespace, [
+      ...mapGetters([
         'getItems'
       ]),
     }

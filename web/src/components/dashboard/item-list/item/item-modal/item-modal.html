@@ -1,0 +1,14 @@
+<md-dialog ref="modal" @open="onOpen" @close="onClose">
+
+  <md-dialog-title>{{ item.brand }}</md-dialog-title>
+
+  <md-dialog-content>
+    <p>This is a content</p>
+    <p>My content is here</p>
+    <p>Price: {{ item.price }}</p>
+  </md-dialog-content>
+
+  <md-dialog-actions>
+    <md-button class="md-primary md-raised" @click="closeDialog(item.id)">Buy</md-button>
+  </md-dialog-actions>
+</md-dialog>
