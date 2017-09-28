@@ -7,7 +7,7 @@
 
   const { mapActions, mapGetters } = createNamespacedHelpers('dashboard')
 
-  export default {
+  const ItemList = {
     name: 'item-list',
     components: {
       'item': Item,
@@ -28,7 +28,7 @@
     },
     methods: {
       ...mapActions([
-        'fetchItems'  
+        'fetchItems'
       ]),
 
       fetch() {
@@ -41,4 +41,6 @@
       ]),
     }
   }
+
+  export default ItemList
 </script>

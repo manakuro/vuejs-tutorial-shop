@@ -1,13 +1,13 @@
-<div class="column">
+<div class="column item">
   <div class="ui card">
     <a class="image" href="#">
       <img :src="getImgPath(item.img)">
     </a>
     <div class="content">
       <div class="meta">
-        <a class="time">{{ item.brand }}</a>
+        <a class="time brand">{{ item.brand }}</a>
       </div>
-      <a class="header" href="#">{{ item.price }}</a>
+      <a class="header price" href="#">{{ item.price }}</a>
       <a href="#" @click.stop.prevent="openModal(item.id)">Quick View</a>
     </div>
   </div>

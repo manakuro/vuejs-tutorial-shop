@@ -16,7 +16,6 @@
     },
     // initialize
     created() {
-      console.log('this.item: ', this.item)
     },
     methods: {
       getImgPath(path) {

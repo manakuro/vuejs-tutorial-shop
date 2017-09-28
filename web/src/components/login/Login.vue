@@ -6,9 +6,9 @@
           <div class="field">
             <div class="ui left icon input">
               <i class="user icon"></i>
-              <input 
-                type="text" 
-                name="email" 
+              <input
+                type="text"
+                name="email"
                 placeholder="E-mail address"
                 v-model="credentials.email"
                 >
@@ -17,9 +17,9 @@
           <div class="field">
             <div class="ui left icon input">
               <i class="lock icon"></i>
-              <input 
-                type="password" 
-                name="password" 
+              <input
+                type="password"
+                name="password"
                 placeholder="Password"
                 v-model="credentials.password"
                 >
@@ -65,7 +65,7 @@
         }
 
         // this.$auth.login(credentials, '')
-        
+        return Promise.resolve('done')
       }
     }
   }
@@ -73,6 +73,6 @@
 
 <style lang="scss" scoped rel="stylesheet/scss">
   .column {
-    max-width: 450px;      
+    max-width: 450px;
   }
 </style>

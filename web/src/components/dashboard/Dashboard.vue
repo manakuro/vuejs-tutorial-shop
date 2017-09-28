@@ -2,7 +2,6 @@
 <style lang="scss" scoped rel="stylesheet/scss" src="./dashboard.scss"></style>
 
 <script>
-  import { mapActions, mapGetters } from 'vuex'
   import ItemList from './item-list/Item-list.vue'
   import Sidebar from '../sidebar/Sidebar.vue'
 
